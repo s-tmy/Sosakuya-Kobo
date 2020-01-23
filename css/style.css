@@ -1,0 +1,24 @@
+.swiper-container {
+    width: 100%;
+    height: 100vh;
+}
+
+/* 各スライド背景に画像をセット */
+.swiper-slide {
+    /* 画像の位置を横中央に */
+    background-position: 50% 0;
+    /* 画像を画面いっぱいに */
+    background-size: cover;
+}
+
+.slide1 {
+    background-image: url(../image/sosakuya-kobo_exterior.jpeg);
+}
+
+.slide2 {
+    background-image: url(../image/sosakuya-kobo_inside1.jpeg);
+}
+
+.slide3 {
+    background-image: url(../image/sosakuya-kobo_inside2.jpeg);
+}

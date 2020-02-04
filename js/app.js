@@ -8,3 +8,10 @@ var mySwiper = new Swiper('.swiper-container', {
     prevEl: '.swiper-button-prev',
   }
 })
+
+mySwiper.on('slideChange', function () {
+  $('.page-title').removeClass(function(index, className) {
+    return (className.match(/slide-\S+/g) || []).join(' ');
+  });
+  $('.page-title').addClass('slide-' + mySwiper.realIndex);
+});

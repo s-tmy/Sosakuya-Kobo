@@ -1,7 +1,79 @@
+@charset "UTF-8";
+
+/* 共通部分
+------------------------------- */
+html {
+    font-size: 100%;
+}
+/* 大きな背景画像 */
+/* .big-bg {
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+} */
+/* HEADER
+------------------------------- */
+.page-header {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+}
+.logo {
+    width: 210px;
+    margin-top: 14px;
+}
+.main-nav {
+    display: flex;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin-top: 34px;
+    list-style: none;
+}
+.main-nav li {
+    margin-left: 36px;
+}
+.main-nav a {
+    color:azure;
+}
+.main-nav a:hover {
+    color: #0bd;
+}
+/* HOME
+------------------------------- */
 .swiper-container {
     width: 100%;
     height: 100vh;
 }
+.page-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: azure;
+}
+.page-title.slide-0 {
+    color: rgb(20, 8, 0);
+}
+.page-title.slide-1 {
+    color: red;
+}
+.page-title.slide-2 {
+    color: blue;
+}
+
+/* パターン2 */
+/* .page-title {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    line-height: 100vh;
+    z-index: 2;
+    color: azure;
+    text-align: center;
+} */
 
 /* 各スライド背景に画像をセット */
 .swiper-slide {
@@ -9,16 +81,30 @@
     background-position: 50% 0;
     /* 画像を画面いっぱいに */
     background-size: cover;
+    text-align: center;
 }
+.swiper-slide::after {
+    content: '';
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.4;
+}
+.slide0 {
+    background-image: url(../image/exterior_sosakuya-kobo.jpeg);
+}    
 
 .slide1 {
-    background-image: url(../image/sosakuya-kobo_exterior.jpeg);
-}
-
-.slide2 {
     background-image: url(../image/sosakuya-kobo_inside1.jpeg);
 }
 
-.slide3 {
-    background-image: url(../image/sosakuya-kobo_inside2.jpeg);
+.slide2 {
+    background-image: url(../image/IMG_1453.png);
+}
+
+.swiper-button {
+    color:azure;
 }
